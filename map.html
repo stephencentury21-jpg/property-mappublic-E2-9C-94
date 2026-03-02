@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hokkaido Property Map</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<style>
+body{margin:0;font-family:Arial;}
+#map{height:100vh;width:100%;}
+
+.price-marker{
+background:#6a3df0;
+color:white;
+padding:6px 10px;
+border-radius:16px;
+font-weight:bold;
+font-size:13px;
+box-shadow:0 2px 6px rgba(0,0,0,0.25);
+}
+
+.popup img{
+width:220px;
+border-radius:10px;
+margin-bottom:8px;
+}
+
+.popup a{
+text-decoration:none;
+color:#6a3df0;
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+const map=L.map('map').setView([43.03,140.85],9);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+attribution:'© OpenStreetMap contributors'
+}).addTo(map);
+
+fetch("listings.json")
+.then(res=>res.json())
+.then(listings=>{
+
+listings.forEach(home=>{
+
+const priceIcon=L.divIcon({
+className:"",
+html:`<div class="price-marker">¥${home.price.toLocaleString()}</div>`
+});
+
+L.marker([home.lat,home.lng],{icon:priceIcon})
+.addTo(map)
+.bindPopup(`
+<div class="popup">
+<img src="${home.photo}">
+<div><strong>${home.title}</strong></div>
+<div>¥${home.price.toLocaleString()}</div>
+<br>
+<a href="${home.url}" target="_blank">View Listing →</a>
+</div>
+`);
+
+});
+
+});
+</script>
+
+</body>
+</html>

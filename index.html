@@ -1,40 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Hokkaido Property Map</title>
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<meta charset="utf-8" />
+<title>Century21 Niseko Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <style>
-body{margin:0;font-family:Arial;}
-#map{height:100vh;width:100%;}
+body { margin:0; }
+#map { height: 100vh; }
 
-.price-marker{
-background:#6a3df0;
-color:white;
-padding:6px 10px;
-border-radius:16px;
-font-weight:bold;
-font-size:13px;
-box-shadow:0 2px 6px rgba(0,0,0,0.25);
+.filter-bar {
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:white;
+  padding:10px;
+  z-index:1000;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+  font-family:Arial;
 }
 
-.popup img{
-width:220px;
-border-radius:10px;
-margin-bottom:8px;
-}
-
-.popup a{
-text-decoration:none;
-color:#6a3df0;
-font-weight:bold;
+.price-marker {
+  background:#000;
+  color:#fff;
+  padding:4px 8px;
+  border-radius:6px;
+  font-size:12px;
+  font-weight:bold;
 }
 </style>
 </head>
 <body>
+
+<div class="filter-bar">
+  <select id="typeFilter">
+    <option value="All">All</option>
+    <option value="House">House</option>
+    <option value="Land">Land</option>
+    <option value="Commercial">Commercial</option>
+  </select>
+</div>
+
+<div id="map"></div>
+
+<script>
+
+var map = L.map('map').setView([42.9, 140.75], 11);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap'
+}).addTo(map);
+
+var markers = [];
+
+function formatPrice(price){
+  return "¥" + price.toLocaleString();
+}
+
+function loadListings(filterType="All") {
+
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
+
+  fetch('listings.json')
+  .then(res => res.json())
+  .then(data => {
+
+    data.forEach(property => {
+
+      if(filterType !== "All" && property.type !== filterType) return;
+
+      var priceIcon = L.divIcon({
+        className: '',
+        html: `<div class="price-marker">${formatPrice(property.price)}</div>`
+      });
+
+      var marker = L.marker([property.lat, property.lng], {icon: priceIcon}).addTo(map);
+
+      marker.bindPopup(`
+        <div style="width:200px">
+          <img src="${property.photo}" style="width:100%; border-radius:6px; margin-bottom:8px;">
+          <strong>${property.title}</strong><br>
+          ${formatPrice(property.price)}<br><br>
+          <a href="${property.url}" target="_blank">View Listing</a>
+        </div>
+      `);
+
+      markers.push(marker);
+
+    });
+
+  });
+
+}
+
+loadListings();
+
+document.getElementById("typeFilter").addEventListener("change", function(){
+  loadListings(this.value);
+});
+
+</script>
+
+</body>
+</html><body>
 
 <div id="map"></div>
 

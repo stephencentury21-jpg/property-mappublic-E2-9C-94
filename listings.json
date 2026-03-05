@@ -162,5 +162,68 @@
     "lng": 142.386082,
     "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/furano-chiro-cliinic-copy_orig.jpg",
     "url": "http://century21nisekohousebank.weebly.com/furano-7-bedroom-commercial-house-for-sale-century21-niseko-real-estate-japan-c21.html"
-  }
+  },
+  {
+  "title": "Sapporo Reicious Tower Building",
+  "price": 120000000000,
+  "lat": 43.066628,
+  "lng": 141.358830,
+  "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/recious-tower-weebly-sized_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/reicious-sapporo-tower-building-for-sale-century21-niseko-real-estate-japan-c21.html",
+  "type": "Commercial"
+},
+{
+  "title": "Otaru 3-Bedroom Renovated House",
+  "price": 9900000,
+  "lat": 43.164541,
+  "lng": 141.053923,
+  "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/0203-2_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/otaru-renovated-3-bedroom-house-for-sale-century21-niseko-real-estate-japan-c21.html",
+  "type": "House"
+},
+{
+  "title": "Otaru Development Land",
+  "price": 167000000,
+  "lat": 43.172282,
+  "lng": 141.057598,
+  "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/otaru-farmland_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/otaru-development-site-for-sale-century21-niseko-real-estate-japan-c21.html",
+  "type": "Land"
+},
+{
+  "title": "Fukui Land",
+  "price": 8000000,
+  "lat": 42.777766,
+  "lng": 140.632636,
+  "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/me-c21-niseko_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/niseko-fukui-epic-view-land-for-sale-century21-niseko-real-estate-japan-c21.html",
+  "type": "Land"
+},
+{
+  "title": "Jozankei 2-Bedroom Condo",
+  "price": 2980000,
+  "lat": 42.972752,
+  "lng": 141.166828,
+  "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/jozankei-mansion-condo_1.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/jozankei-onsen-condo-for-sale-century21-niseko-real-estate-japan-c21.html",
+  "type": "House"
+},
+{
+  "title": "Otaru Historical Commercial Building",
+  "price": 92000000,
+  "lat": 43.190833,
+  "lng": 140.998512,
+  "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/otaru-heritage-property_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/heritage-otaru-building-for-sale-century21-niseko-real-estate-japan-c21.html",
+  "type": "Commercial"
+},
+{
+  "title": "Otaru 4-Bedroom Condo",
+  "price": 4900000,
+  "lat": 43.191792,
+  "lng": 141.001123,
+  "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/president-heiim_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/otaru-president-heir-4-bedroom-condo-for-sale-century21-niseko-real-estate-japan-c21.html",
+  "type": "House"
+}
 ]

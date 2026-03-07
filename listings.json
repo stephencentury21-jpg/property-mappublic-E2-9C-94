@@ -252,5 +252,25 @@
   "photo": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/square-tower-exterior_1.jpg",
   "url": "http://century21nisekohousebank.weebly.com/7-unit-luxury-condo-building-for-sale-century21-niseko-real-estate-japan-c21.html",
   "type": "Commercial"
+},
+  {
+  "title": "Otaru 2-Bedroom Beach Front Villa",
+  "price": 150000000,
+  "city": "Otaru",
+  "beds": 2,
+  "lat": 43.211702,
+  "lng": 140.918026,
+  "image": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/shioya-milliondollar-beach-house_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/shioya-million-dollar-beach-front-villa-for-sale-century21-niseko-real-estate-japan-c21.html"
+},
+{
+  "title": "Otaru 5-Bedroom Ryokan Inn",
+  "price": 10000000,
+  "city": "Otaru",
+  "beds": 5,
+  "lat": 43.201294,
+  "lng": 140.996693,
+  "image": "http://century21nisekohousebank.weebly.com/uploads/1/1/2/4/112484309/otaru-ryokan-interior-homepage-photo_orig.jpg",
+  "url": "http://century21nisekohousebank.weebly.com/otaru-ryokan-inn-for-sale-century21-niseko-real-estate-japan-c21.html"
 }
 ]
